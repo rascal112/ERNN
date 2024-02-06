@@ -5,6 +5,7 @@ PyTorch implementation of the paper "Group Equivariant Network for 3D Point Clou
 ### Installation
 
 # Install packages and other dependencies
+```
 python setup.py build develop
 ```
 
