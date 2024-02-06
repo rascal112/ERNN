@@ -4,10 +4,13 @@ PyTorch implementation of the paper "Group Equivariant Network for 3D Point Clou
 
 ### Installation
 
-# Install packages and other dependencies
+Please first install "torch" and "torch_geometric". Then you can use the following command for installation.
+
 ```
+pip install -r requirements.txt
 python setup.py build develop
 ```
+
 
 Code has been tested with Ubuntu 20.04, GCC 9.3.0, Python 3.8, PyTorch 1.11.0, CUDA 11.3.
 
@@ -27,7 +30,7 @@ The dataset can be downloaded from [PREDATOR](https://github.com/prs-eth/Overlap
 
 ### Training
 
-The code for 3DMatch is in `experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn`. Use the following command for training.
+The code for 3DMatch is in `experiments/3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn`. Use the following command for training.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python trainval.py
@@ -38,7 +41,7 @@ CUDA_VISIBLE_DEVICES=0 python trainval.py
 Use the following command for testing.
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python test.py --snapshot=../../output/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/snapshots/snapshot.pth.tar --benchmark=3DMatch
+CUDA_VISIBLE_DEVICES=0 python test.py --snapshot=../../output/3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/snapshots/snapshot.pth.tar --benchmark=3DMatch
 CUDA_VISIBLE_DEVICES=0 python eval.py --benchmark=3DMatch --method=lgr
 ```
 

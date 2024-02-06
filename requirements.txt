@@ -11,3 +11,5 @@ einops
 ipdb
 tensorboard
 tensorboardX
+e3nn
+IPython
